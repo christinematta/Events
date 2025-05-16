@@ -26,7 +26,6 @@ header
     font-size: 25px
     color: #333
 
-
 footer
   margin-top: 20px
   padding: 30px
@@ -44,7 +43,6 @@ main
 .home_body
   display: flex
   flex-direction: column
-
 
 .card
   display: flex
@@ -64,13 +62,13 @@ main
   &:hover
     transform: scale(1.02)
   .card_img
-   width: 100%
-   max-width: 300px
-   border-radius: 4px
+    width: 100%
+    max-width: 300px
+    border-radius: 4px
   .card_content
-   display: flex
-   flex-direction: column
-   gap: 10px
+    display: flex
+    flex-direction: column
+    gap: 10px
 
 .about_us_list
   display: flex
@@ -97,9 +95,9 @@ main
     overflow: hidden
     transition: transform 0.3s ease-in-out
     &:hover
-     .event-content-img
+    .event-content-img
       transform: scale(1.05)
-     h3
+    h3
       text-shadow: 1px 2px 3px #3a3a3a45
     h3
       margin-top: 10px
@@ -125,25 +123,42 @@ main
     width: 100%
     border-radius: 4px
 
+  @mixin input-style
+    padding: 10px
+    border: 1px solid #e4e3f4
+    border-radius: 4px
 
+  .event_input
+    h3
+      margin: 15px 0px
+    input
+      width: 60%
+      @include input-style
+
+  button
+    width: 100px
+    padding: 6px
+    font-weight: bold
+    background-color: #e4e3f4
+    @include input-style
+    &:hover
+      box-shadow: 1px 2px 3px #3c3a3a45
+      border: none
 
 // Keyframes for the slide-in effect
 @keyframes slide-in-from-right
   0%
-    transform: translateY(-100%) // Start 100% off the right
+    transform: translateY(-100%)
     opacity: 0
 
   100%
-    transform: translateY(0)   // End at original position
+    transform: translateY(0)
     opacity: 1
 
-
-// Class for the animated text
 .slide-in
   animation: slide-in-from-right 1.5s ease-out forwards // Animation duration, easing, and forwards
 
-// Optional styles for your text
 .text
-  font-size: 24px // Adjust font size as needed
-  margin: 20px    // Add margin
-  color: #333     // Text color
+  font-size: 24px
+  margin: 20px
+  color: #333
